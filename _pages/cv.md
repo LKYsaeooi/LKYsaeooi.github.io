@@ -1,7 +1,7 @@
 ---
 title: Curriculum vitae
 permalink: /cv/
-excerpt: "Kaiyuan Li — education, published articles, scientific software, skills, and selected honors."
+excerpt: "Kaiyuan Li — education, published articles, patent, scientific software, skills, and selected honors."
 ---
 
 <p class="page-lead">Kaiyuan Li <span lang="zh-Hans">· 李开元</span></p>
@@ -20,6 +20,10 @@ Complex photonics; optical computing; AI for optics; computational imaging; scie
 ## Published articles
 
 {% include publication-list.html %}
+
+## Patent
+
+{% include patent-list.html %}
 
 ## Open-source contributions
 

@@ -1,0 +1,28 @@
+# Public entries may have a URL. Private entries deliberately have no URL field.
+# Descriptions summarize repository documentation without disclosing methods or results.
+- name: pyMESTI
+  visibility: public
+  category: OPEN-SOURCE CONTRIBUTION
+  subtitle: Electromagnetic scattering, in Python.
+  description: I contribute to a native Python port of MESTI.jl for frequency-domain electromagnetic scattering simulations. My work includes scalar and vectorial solvers, scattering-matrix computation, field reconstruction, and numerical verification.
+  features:
+    - 2D scalar/TM and 3D vectorial finite-difference frequency-domain methods
+    - CPU and GPU sparse-solver backends
+    - Regression checks and comparisons with the Julia implementation
+  url: https://github.com/LKYsaeooi/pyMESTI
+- name: AutoSTORM
+  visibility: private
+  category: PRIVATE RESEARCH SOFTWARE
+  subtitle: Software for single-molecule localization microscopy.
+  description: A private research prototype bringing together microscope control, multi-position image acquisition, single-molecule localization, drift correction, and super-resolution reconstruction.
+- name: Beam-shutter control
+  visibility: public
+  category: PUBLIC REPOSITORY
+  subtitle: Python control for an MSC shutter controller.
+  description: A Python interface for beam-shutter control on Windows, covering connection management, open/close commands, state readback, and cycle-timing configuration.
+  url: https://github.com/LKYsaeooi/Ibtek-beam-shutter
+- name: Optical experiment notebooks
+  visibility: private
+  category: PRIVATE RESEARCH SOFTWARE
+  subtitle: A notebook-based workspace for optical experiments.
+  description: A private collection of notebooks and supporting documentation for organizing optical experiments.

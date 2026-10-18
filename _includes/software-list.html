@@ -1,0 +1,15 @@
+{% comment %}Private entries never render an anchor, even if a URL is added accidentally.{% endcomment %}
+{% for software in site.data.software %}
+<div class="software-feature" data-visibility="{{ software.visibility }}">
+  <p class="eyebrow">{{ software.category }}</p>
+  <h2>{{ software.name }}</h2>
+  <p class="software-subtitle">{{ software.subtitle }}</p>
+  <p>{{ software.description }}</p>
+  {% if software.features %}
+  <ul>{% for feature in software.features %}<li>{{ feature }}</li>{% endfor %}</ul>
+  {% endif %}
+  {% if software.visibility == 'public' and software.url %}
+  <a class="primary-link" href="{{ software.url }}">View repository <span aria-hidden="true">↗</span></a>
+  {% endif %}
+</div>
+{% endfor %}

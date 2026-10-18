@@ -6,6 +6,8 @@ A personalized Academic Pages / Jekyll website prepared for GitHub Pages.
 
 - `_config.yml`: name, email, academic profiles, website address.
 - `_data/profile.yml`: education, skills, broad interests, selected honors.
+- `_data/patents.yml`: verified patent grant details, shared by publications and CV.
+- `_data/software.yml`: software introductions; private entries have no URL.
 - `index.md`: short biography and home page.
 - `_publications/`: one Markdown record per published article.
 - `_pages/`: publications, software, public CV, contact, and 404 page.
@@ -57,11 +59,13 @@ root site. A successful deployment in GitHub Actions confirms publication.
 
 ## Content scope
 
-The site contains education, broad interests, published articles, scientific
-software, skills, selected honors, and academic contact links. It excludes
+The site contains education, broad interests, published articles, a granted
+invention patent, scientific software, skills, selected honors, and academic contact links. It excludes
 specific doctoral project proposals, unpublished manuscripts, the full private
 application CV, phone / WeChat details, referee details, identity documents,
 transcripts, recommendation letters, and research statements.
+Private software is described briefly without repository links or specific
+research methods or results.
 
 Private editorial provenance is retained locally and excluded from the public
 repository. See `THEME_VERSION.md` for the pinned theme revision; it is excluded

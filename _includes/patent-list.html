@@ -1,0 +1,15 @@
+{% comment %}One grant record is shared by the publications page and public CV.{% endcomment %}
+<div class="publication-list">
+{% for patent in site.data.patents %}
+  <div class="publication-entry patent-entry">
+    <div class="publication-year">{{ patent.year }}</div>
+    <div>
+      <p class="publication-venue">Granted Chinese invention patent</p>
+      <h3>{{ patent.title }}</h3>
+      <p lang="zh-Hans">{{ patent.original_title }}</p>
+      <p class="publication-authors" lang="zh-Hans">Inventors: {{ patent.inventors | replace: '李开元', '<strong>李开元</strong>' }}</p>
+      <p><strong>{{ patent.publication_number }}</strong><br>{{ patent.patent_number }}<br>Granted {{ patent.grant_date }} · {{ patent.proprietor }}</p>
+    </div>
+  </div>
+{% endfor %}
+</div>

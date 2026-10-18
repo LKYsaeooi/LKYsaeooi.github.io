@@ -19,9 +19,20 @@ class PageLinks(HTMLParser):
         super().__init__()
         self.links = []
         self.text = []
+        self.private_sections = []
+        self.private_links = []
 
     def handle_starttag(self, tag, attrs):
+        attributes = dict(attrs)
+        if tag == "div":
+            self.private_sections.append(attributes.get("data-visibility") == "private")
+        if tag == "a" and any(self.private_sections):
+            self.private_links.append(attributes.get("href", ""))
         self.links.extend(value for key, value in attrs if key in {"href", "src"} and value)
+
+    def handle_endtag(self, tag):
+        if tag == "div" and self.private_sections:
+            self.private_sections.pop()
 
     def handle_data(self, data):
         self.text.append(data)
@@ -46,6 +57,8 @@ def check_site(root, baseurl=""):
             errors.append(f"Unrendered Liquid in {page.relative_to(root)}")
         parsed = PageLinks()
         parsed.feed(raw)
+        if parsed.private_links:
+            errors.append(f"Private software entry contains a link: {page.relative_to(root)}")
         text = " ".join(parsed.text).casefold()
         forbidden = ["super-memory", "tilt-invariant", "research statement", "phd project", "ph.d. project", "158 8969", "1588969", "wechat", "none@example.org", "your sidebar name", "red brick university"]
         errors.extend(f"Excluded content {term!r}: {page.relative_to(root)}" for term in forbidden if term in text)
@@ -67,6 +80,10 @@ def check_site(root, baseurl=""):
     publications = root / "publications/index.html"
     if publications.is_file() and len(re.findall(r'class="publication-entry"', publications.read_text(encoding="utf-8"))) != 3:
         errors.append("The publications page must contain exactly the three supplied published papers.")
+    for name in ["publications/index.html", "cv/index.html"]:
+        page = root / name
+        if page.is_file() and "CN 116165187 B" not in page.read_text(encoding="utf-8"):
+            errors.append(f"Verified patent missing from {name}")
     if errors:
         raise SystemExit("\n".join(errors))
     print(f"PASS: {len(pages)} HTML pages; local references, publication count, template rendering, and content exclusions.")
