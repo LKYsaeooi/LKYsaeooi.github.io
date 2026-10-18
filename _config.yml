@@ -1,0 +1,75 @@
+# Personal content lives here, in _data/profile.yml, and in _publications/.
+# The theme is vendored at a fixed revision; no remote-theme dependency is needed.
+locale: en-US
+site_theme: default
+title: Kaiyuan Li
+title_separator: "|"
+name: Kaiyuan Li
+description: "Kaiyuan Li — photonics, optical computing, computational imaging, and scientific software."
+url: https://lkysaeooi.github.io
+baseurl: ""
+repository: LKYsaeooi/LKYsaeooi.github.io
+timezone: Asia/Shanghai
+encoding: utf-8
+author:
+  name: Kaiyuan Li
+  chinese_name: 李开元
+  bio: "Optical engineering · Shenzhen University"
+  location: Shenzhen, China
+  employer: Shenzhen University
+  email: lky20020627@gmail.com
+  github: LKYsaeooi
+  googlescholar: https://scholar.google.com/citations?user=G_TtAcwAAAAJ
+  avatar: monogram.svg
+atom_feed:
+  hide: true
+analytics:
+  provider: false
+comments:
+  provider: false
+breadcrumbs: false
+words_per_minute: 160
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+sass:
+  sass_dir: _sass
+  style: compressed
+plugins:
+  - jekyll-sitemap
+collections:
+  publications:
+    output: false
+    permalink: /publications/:path/
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: single
+      author_profile: true
+      share: false
+      comments: false
+      read_time: false
+      related: false
+include:
+  - _pages
+exclude:
+  - .build-tools
+  - .qa
+  - .preview
+  - .github
+  - .bundle
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - SOURCE_NOTES.md
+  - THEME_VERSION.md
+  - LICENSE
+  - scripts
+  - vendor
+  - assets/js/_main.js
+  - assets/js/plugins
+  - assets/js/vendor

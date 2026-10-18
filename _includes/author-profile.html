@@ -1,0 +1,13 @@
+<div class="profile" itemscope itemtype="https://schema.org/Person">
+<img class="profile-monogram" src="{{ '/images/monogram.svg' | relative_url }}" width="148" height="148" alt="KL monogram">
+<h2 class="profile-name" itemprop="name">{{ site.author.name }}</h2>
+<p class="profile-chinese" lang="zh-Hans">{{ site.author.chinese_name }}</p>
+<p class="profile-role">M.S. student<span class="profile-field">Optical Engineering</span></p>
+<p class="profile-institution">{{ site.author.employer }}</p>
+<p class="profile-location">{{ site.author.location }}</p>
+<div class="profile-rule"></div>
+<ul class="profile-links">
+<li><a href="mailto:{{ site.author.email }}"><span class="profile-icon" aria-hidden="true">@</span>Email<span aria-hidden="true">↗</span></a></li>
+<li><a href="{{ site.author.googlescholar }}"><span class="profile-icon" aria-hidden="true">S</span>Google Scholar<span aria-hidden="true">↗</span></a></li>
+<li><a href="https://github.com/{{ site.author.github }}"><span class="profile-icon" aria-hidden="true">⌘</span>GitHub<span aria-hidden="true">↗</span></a></li>
+</ul></div>

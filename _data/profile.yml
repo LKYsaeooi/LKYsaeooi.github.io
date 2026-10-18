@@ -1,0 +1,34 @@
+# Public-facing facts transcribed from the supplied academic CV.
+# Keep dates and publication status explicit; do not infer a doctoral affiliation.
+education:
+  - degree: M.S. in Optical Engineering
+    institution: Shenzhen University
+    dates: "September 2024 – June 2027 (expected)"
+  - degree: B.S. in Optoelectronic Information Science and Engineering
+    institution: Shenzhen University
+    dates: "September 2020 – June 2024"
+interests:
+  - title: Complex photonics
+    description: Light propagation, scattering, and wavefront shaping.
+  - title: Optical computing
+    description: Physical systems and computational methods for processing information with light.
+  - title: Computational imaging
+    description: Optical measurement, image analysis, and learning-based methods.
+  - title: Scientific software
+    description: Reusable numerical tools for optics and electromagnetic simulation.
+skills:
+  - title: Programming
+    items: Python, MATLAB, Julia, LaTeX
+  - title: Scientific computing
+    items: Sparse numerical linear algebra, numerical optimization, GPU computing
+  - title: Simulation
+    items: COMSOL Multiphysics, Lumerical FDTD, MUMPS
+  - title: Experimental optics
+    items: Optical alignment, wavefront shaping, SLM control, microscopy, automated experimental systems
+  - title: Data and learning
+    items: Signal and image processing, statistical analysis, machine learning
+awards:
+  - "National University Students’ Opt-Sci-Tech Competition — provincial second prize (2022) and third prize (2023)"
+  - "Shenzhen University Students’ Opt-Sci-Tech Competition, Lathan Cup — university first prize (2023)"
+  - "Lanqiao Cup — provincial third prize (2023)"
+  - "National Collegiate Mathematics Competition, non-mathematics category — second prize"

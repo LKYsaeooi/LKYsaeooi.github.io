@@ -1,0 +1,13 @@
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+.bundle/
+/vendor/
+.build-tools/
+.qa/
+.preview/
+Gemfile.lock
+/SOURCE_NOTES.md
+__pycache__/
+*.pyc

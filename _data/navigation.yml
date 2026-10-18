@@ -1,0 +1,11 @@
+main:
+  - title: About
+    url: /
+  - title: Publications
+    url: /publications/
+  - title: Software
+    url: /software/
+  - title: CV
+    url: /cv/
+  - title: Contact
+    url: /contact/
